@@ -1,0 +1,33 @@
+[project]
+name = "pivotrag"
+version = "0.1.0"
+description = "PivoRAG: Entity-Chunk Bipartite Graph RAG"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+dependencies = [
+    "numpy>=1.25",
+    "pandas>=2.2",
+    "faiss-cpu>=1.7",
+    "networkx>=3.0",
+    "scipy>=1.11",
+    "pyarrow>=14.0",
+    "httpx>=0.27",
+    "tiktoken>=0.7",
+    "spacy>=3.7.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pivotrag"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.6",
+]

@@ -1,0 +1,38 @@
+# Python caches and environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local credentials and IDE state
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+
+# Build and test artifacts
+build/
+dist/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Runtime outputs, downloaded datasets, and model weights
+dataset/*
+!dataset/.gitkeep
+model/
+models/
+**/output/
+*_root/
+token_usage.json
+eval_result*.json
+*.npy
+*.parquet
+
+# OS files
+.DS_Store
+Thumbs.db
